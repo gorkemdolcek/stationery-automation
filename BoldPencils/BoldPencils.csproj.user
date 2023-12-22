@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="AnasayfaPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Depo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Kategori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Musteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Personel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Rapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Satıs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Siparis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Stok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tedarikci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Urun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Yapanlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
