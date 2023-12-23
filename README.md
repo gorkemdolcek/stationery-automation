@@ -157,13 +157,13 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Görkem Dolcek**
 
 - GitHub: [@gorkemdolcek](https://github.com/gorkemdolcek)
 - Twitter: [@mrdolcek](https://twitter.com/mrdolcek)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/gorkemdolcek)
 
-👤 **Author2**
+👤 **Mehmet Demir**
 
 - GitHub: [@jackalkarlos](https://github.com/jackalkarlos)
 - Twitter: [@jackalkarlos](https://twitter.com/jackalkarlos)
