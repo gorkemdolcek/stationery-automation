@@ -21,12 +21,6 @@ namespace BoldPencils
         {
             anasayfa_main_panel.Controls.Clear();
 
-            Satıs satisPage = new Satıs();
-            satisPage.TopLevel = false;
-            anasayfa_main_panel.Controls.Add(satisPage);
-            satisPage.Dock = DockStyle.Fill;
-
-            satisPage.Show();
 
 
 

@@ -22,13 +22,13 @@
     <Compile Update="Personel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Rapor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Satıs.cs">
+    <Compile Update="PersonelEkle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Siparis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SiparisEkle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Stok.cs">
@@ -38,6 +38,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Urun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UrunEkle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Yapanlar.cs">

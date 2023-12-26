@@ -29,32 +29,28 @@
         private void InitializeComponent()
         {
             depo_panel = new System.Windows.Forms.Panel();
+            depo_ListView1 = new ListView();
+            DepoIDColumn = new ColumnHeader();
             depopaneli_label = new Label();
-            satıs_listBox = new ListBox();
             arama_label = new Label();
             depo_label = new Label();
             depo_search_textBox = new TextBox();
-            azdancok_radiobtn = new RadioButton();
-            verileriver_btn = new Button();
-            coktanaz_radiobtn = new RadioButton();
             depoçıkar_btn = new Button();
             depoekle_btn = new Button();
-            depo_textBox = new TextBox();
+            DepoDetayID = new ColumnHeader();
+            UrunID = new ColumnHeader();
+            UrunAdet = new ColumnHeader();
             depo_panel.SuspendLayout();
             SuspendLayout();
             // 
             // depo_panel
             // 
             depo_panel.BackColor = Color.FromArgb(27, 66, 66);
-            depo_panel.Controls.Add(depo_textBox);
+            depo_panel.Controls.Add(depo_ListView1);
             depo_panel.Controls.Add(depopaneli_label);
-            depo_panel.Controls.Add(satıs_listBox);
             depo_panel.Controls.Add(arama_label);
             depo_panel.Controls.Add(depo_label);
             depo_panel.Controls.Add(depo_search_textBox);
-            depo_panel.Controls.Add(azdancok_radiobtn);
-            depo_panel.Controls.Add(verileriver_btn);
-            depo_panel.Controls.Add(coktanaz_radiobtn);
             depo_panel.Controls.Add(depoçıkar_btn);
             depo_panel.Controls.Add(depoekle_btn);
             depo_panel.Dock = DockStyle.Fill;
@@ -62,6 +58,24 @@
             depo_panel.Name = "depo_panel";
             depo_panel.Size = new Size(797, 643);
             depo_panel.TabIndex = 10;
+            // 
+            // depo_ListView1
+            // 
+            depo_ListView1.Alignment = ListViewAlignment.SnapToGrid;
+            depo_ListView1.AutoArrange = false;
+            depo_ListView1.Columns.AddRange(new ColumnHeader[] { DepoIDColumn, DepoDetayID, UrunID, UrunAdet });
+            depo_ListView1.FullRowSelect = true;
+            depo_ListView1.Location = new Point(61, 62);
+            depo_ListView1.Name = "depo_ListView1";
+            depo_ListView1.Size = new Size(679, 361);
+            depo_ListView1.TabIndex = 12;
+            depo_ListView1.UseCompatibleStateImageBehavior = false;
+            depo_ListView1.View = View.Details;
+            // 
+            // DepoIDColumn
+            // 
+            DepoIDColumn.Text = "DepoID";
+            DepoIDColumn.Width = 50;
             // 
             // depopaneli_label
             // 
@@ -73,16 +87,6 @@
             depopaneli_label.Size = new Size(83, 17);
             depopaneli_label.TabIndex = 9;
             depopaneli_label.Text = "Depo Paneli";
-            // 
-            // satıs_listBox
-            // 
-            satıs_listBox.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            satıs_listBox.FormattingEnabled = true;
-            satıs_listBox.ItemHeight = 17;
-            satıs_listBox.Location = new Point(61, 62);
-            satıs_listBox.Name = "satıs_listBox";
-            satıs_listBox.Size = new Size(679, 361);
-            satıs_listBox.TabIndex = 0;
             // 
             // arama_label
             // 
@@ -100,7 +104,7 @@
             depo_label.AutoSize = true;
             depo_label.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
             depo_label.ForeColor = Color.White;
-            depo_label.Location = new Point(418, 462);
+            depo_label.Location = new Point(418, 435);
             depo_label.Name = "depo_label";
             depo_label.Size = new Size(57, 17);
             depo_label.TabIndex = 8;
@@ -108,47 +112,14 @@
             // 
             // depo_search_textBox
             // 
-            depo_search_textBox.Location = new Point(61, 456);
+            depo_search_textBox.Location = new Point(61, 455);
             depo_search_textBox.Name = "depo_search_textBox";
             depo_search_textBox.Size = new Size(246, 23);
             depo_search_textBox.TabIndex = 1;
             // 
-            // azdancok_radiobtn
-            // 
-            azdancok_radiobtn.AutoSize = true;
-            azdancok_radiobtn.ForeColor = Color.White;
-            azdancok_radiobtn.Location = new Point(61, 505);
-            azdancok_radiobtn.Name = "azdancok_radiobtn";
-            azdancok_radiobtn.Size = new Size(120, 19);
-            azdancok_radiobtn.TabIndex = 3;
-            azdancok_radiobtn.TabStop = true;
-            azdancok_radiobtn.Text = "Azdan Çoğa Sırala";
-            azdancok_radiobtn.UseVisualStyleBackColor = true;
-            // 
-            // verileriver_btn
-            // 
-            verileriver_btn.Location = new Point(99, 569);
-            verileriver_btn.Name = "verileriver_btn";
-            verileriver_btn.Size = new Size(152, 45);
-            verileriver_btn.TabIndex = 4;
-            verileriver_btn.Text = "Verileri Ver";
-            verileriver_btn.UseVisualStyleBackColor = true;
-            // 
-            // coktanaz_radiobtn
-            // 
-            coktanaz_radiobtn.AutoSize = true;
-            coktanaz_radiobtn.ForeColor = Color.White;
-            coktanaz_radiobtn.Location = new Point(61, 530);
-            coktanaz_radiobtn.Name = "coktanaz_radiobtn";
-            coktanaz_radiobtn.Size = new Size(116, 19);
-            coktanaz_radiobtn.TabIndex = 2;
-            coktanaz_radiobtn.TabStop = true;
-            coktanaz_radiobtn.Text = "Çoktan Aza Sırala";
-            coktanaz_radiobtn.UseVisualStyleBackColor = true;
-            // 
             // depoçıkar_btn
             // 
-            depoçıkar_btn.Location = new Point(556, 550);
+            depoçıkar_btn.Location = new Point(556, 455);
             depoçıkar_btn.Name = "depoçıkar_btn";
             depoçıkar_btn.Size = new Size(132, 39);
             depoçıkar_btn.TabIndex = 6;
@@ -157,19 +128,24 @@
             // 
             // depoekle_btn
             // 
-            depoekle_btn.Location = new Point(418, 550);
+            depoekle_btn.Location = new Point(418, 455);
             depoekle_btn.Name = "depoekle_btn";
             depoekle_btn.Size = new Size(132, 39);
             depoekle_btn.TabIndex = 7;
             depoekle_btn.Text = "Depo Ekle";
             depoekle_btn.UseVisualStyleBackColor = true;
             // 
-            // depo_textBox
+            // DepoDetayID
             // 
-            depo_textBox.Location = new Point(418, 521);
-            depo_textBox.Name = "depo_textBox";
-            depo_textBox.Size = new Size(270, 23);
-            depo_textBox.TabIndex = 10;
+            DepoDetayID.Text = "DepoDetayID";
+            // 
+            // UrunID
+            // 
+            UrunID.Text = "UrunID";
+            // 
+            // UrunAdet
+            // 
+            UrunAdet.Text = "UrunAdet";
             // 
             // Depo
             // 
@@ -190,15 +166,16 @@
 
         private System.Windows.Forms.Panel depo_panel;
         private Label depopaneli_label;
-        private ListBox satıs_listBox;
         private Label arama_label;
         private Label depo_label;
         private TextBox depo_search_textBox;
-        private RadioButton azdancok_radiobtn;
-        private Button verileriver_btn;
-        private RadioButton coktanaz_radiobtn;
         private Button depoçıkar_btn;
         private Button depoekle_btn;
-        private TextBox depo_textBox;
+        private ListView depo_ListView1;
+        private ColumnHeader MusteriID;
+        private ColumnHeader DepoIDColumn;
+        private ColumnHeader DepoDetayID;
+        private ColumnHeader UrunID;
+        private ColumnHeader UrunAdet;
     }
 }

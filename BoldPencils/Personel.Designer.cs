@@ -29,61 +29,80 @@
         private void InitializeComponent()
         {
             satıs_panel = new System.Windows.Forms.Panel();
+            azsirala = new Button();
+            button1 = new Button();
             personelmaasdusur_btn = new Button();
-            personelmaasekle_btn = new Button();
             satıspaneli_label = new Label();
-            satıs_listBox = new ListBox();
             arama_label = new Label();
             satıs_label = new Label();
             personel_search_textBox = new TextBox();
-            azdancok_radiobtn = new RadioButton();
-            verileriver_btn = new Button();
-            coktanaz_radiobtn = new RadioButton();
+            zasirala = new Button();
             personelcıkar_btn = new Button();
             personelekle_btn = new Button();
-            personel_textBox = new TextBox();
+            personel_listview1 = new ListView();
+            ID = new ColumnHeader();
+            Adi = new ColumnHeader();
+            Soyadi = new ColumnHeader();
+            Telefon = new ColumnHeader();
+            Email = new ColumnHeader();
+            Maaş = new ColumnHeader();
+            Şehir = new ColumnHeader();
+            Bölge = new ColumnHeader();
+            textBox1 = new TextBox();
             satıs_panel.SuspendLayout();
             SuspendLayout();
             // 
             // satıs_panel
             // 
             satıs_panel.BackColor = Color.FromArgb(27, 66, 66);
-            satıs_panel.Controls.Add(personel_textBox);
+            satıs_panel.Controls.Add(textBox1);
+            satıs_panel.Controls.Add(azsirala);
+            satıs_panel.Controls.Add(button1);
             satıs_panel.Controls.Add(personelmaasdusur_btn);
-            satıs_panel.Controls.Add(personelmaasekle_btn);
             satıs_panel.Controls.Add(satıspaneli_label);
-            satıs_panel.Controls.Add(satıs_listBox);
             satıs_panel.Controls.Add(arama_label);
             satıs_panel.Controls.Add(satıs_label);
             satıs_panel.Controls.Add(personel_search_textBox);
-            satıs_panel.Controls.Add(azdancok_radiobtn);
-            satıs_panel.Controls.Add(verileriver_btn);
-            satıs_panel.Controls.Add(coktanaz_radiobtn);
+            satıs_panel.Controls.Add(zasirala);
             satıs_panel.Controls.Add(personelcıkar_btn);
             satıs_panel.Controls.Add(personelekle_btn);
+            satıs_panel.Controls.Add(personel_listview1);
             satıs_panel.Dock = DockStyle.Fill;
             satıs_panel.Location = new Point(0, 0);
             satıs_panel.Name = "satıs_panel";
             satıs_panel.Size = new Size(797, 643);
             satıs_panel.TabIndex = 10;
+            satıs_panel.Paint += satıs_panel_Paint;
+            // 
+            // azsirala
+            // 
+            azsirala.Location = new Point(99, 536);
+            azsirala.Name = "azsirala";
+            azsirala.Size = new Size(152, 45);
+            azsirala.TabIndex = 15;
+            azsirala.Text = "A-Z Sırala";
+            azsirala.UseVisualStyleBackColor = true;
+            azsirala.Click += azsirala_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(99, 485);
+            button1.Name = "button1";
+            button1.Size = new Size(152, 45);
+            button1.TabIndex = 14;
+            button1.Text = "Verileri Ver";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // personelmaasdusur_btn
             // 
-            personelmaasdusur_btn.Location = new Point(556, 550);
+            personelmaasdusur_btn.Location = new Point(490, 536);
             personelmaasdusur_btn.Name = "personelmaasdusur_btn";
             personelmaasdusur_btn.Size = new Size(132, 39);
             personelmaasdusur_btn.TabIndex = 11;
-            personelmaasdusur_btn.Text = "Personel Maaş Düşür";
+            personelmaasdusur_btn.Text = "Personel Maaş Güncelle";
             personelmaasdusur_btn.UseVisualStyleBackColor = true;
-            // 
-            // personelmaasekle_btn
-            // 
-            personelmaasekle_btn.Location = new Point(556, 505);
-            personelmaasekle_btn.Name = "personelmaasekle_btn";
-            personelmaasekle_btn.Size = new Size(132, 39);
-            personelmaasekle_btn.TabIndex = 10;
-            personelmaasekle_btn.Text = "Personel Maaş Ekle";
-            personelmaasekle_btn.UseVisualStyleBackColor = true;
+            personelmaasdusur_btn.Click += personelmaasdusur_btn_Click;
             // 
             // satıspaneli_label
             // 
@@ -92,19 +111,9 @@
             satıspaneli_label.ForeColor = Color.White;
             satıspaneli_label.Location = new Point(61, 42);
             satıspaneli_label.Name = "satıspaneli_label";
-            satıspaneli_label.Size = new Size(79, 17);
+            satıspaneli_label.Size = new Size(103, 17);
             satıspaneli_label.TabIndex = 9;
-            satıspaneli_label.Text = "Satış Paneli";
-            // 
-            // satıs_listBox
-            // 
-            satıs_listBox.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            satıs_listBox.FormattingEnabled = true;
-            satıs_listBox.ItemHeight = 17;
-            satıs_listBox.Location = new Point(61, 62);
-            satıs_listBox.Name = "satıs_listBox";
-            satıs_listBox.Size = new Size(679, 361);
-            satıs_listBox.TabIndex = 0;
+            satıspaneli_label.Text = "Personel Paneli";
             // 
             // arama_label
             // 
@@ -135,63 +144,85 @@
             personel_search_textBox.Size = new Size(246, 23);
             personel_search_textBox.TabIndex = 1;
             // 
-            // azdancok_radiobtn
+            // zasirala
             // 
-            azdancok_radiobtn.AutoSize = true;
-            azdancok_radiobtn.ForeColor = Color.White;
-            azdancok_radiobtn.Location = new Point(61, 505);
-            azdancok_radiobtn.Name = "azdancok_radiobtn";
-            azdancok_radiobtn.Size = new Size(120, 19);
-            azdancok_radiobtn.TabIndex = 3;
-            azdancok_radiobtn.TabStop = true;
-            azdancok_radiobtn.Text = "Azdan Çoğa Sırala";
-            azdancok_radiobtn.UseVisualStyleBackColor = true;
-            // 
-            // verileriver_btn
-            // 
-            verileriver_btn.Location = new Point(99, 569);
-            verileriver_btn.Name = "verileriver_btn";
-            verileriver_btn.Size = new Size(152, 45);
-            verileriver_btn.TabIndex = 4;
-            verileriver_btn.Text = "Verileri Ver";
-            verileriver_btn.UseVisualStyleBackColor = true;
-            // 
-            // coktanaz_radiobtn
-            // 
-            coktanaz_radiobtn.AutoSize = true;
-            coktanaz_radiobtn.ForeColor = Color.White;
-            coktanaz_radiobtn.Location = new Point(61, 530);
-            coktanaz_radiobtn.Name = "coktanaz_radiobtn";
-            coktanaz_radiobtn.Size = new Size(116, 19);
-            coktanaz_radiobtn.TabIndex = 2;
-            coktanaz_radiobtn.TabStop = true;
-            coktanaz_radiobtn.Text = "Çoktan Aza Sırala";
-            coktanaz_radiobtn.UseVisualStyleBackColor = true;
+            zasirala.Location = new Point(99, 587);
+            zasirala.Name = "zasirala";
+            zasirala.Size = new Size(152, 45);
+            zasirala.TabIndex = 4;
+            zasirala.Text = "Z-A Sırala";
+            zasirala.UseVisualStyleBackColor = true;
+            zasirala.Click += zasirala_Click;
             // 
             // personelcıkar_btn
             // 
-            personelcıkar_btn.Location = new Point(418, 550);
+            personelcıkar_btn.Location = new Point(556, 456);
             personelcıkar_btn.Name = "personelcıkar_btn";
             personelcıkar_btn.Size = new Size(132, 39);
             personelcıkar_btn.TabIndex = 6;
             personelcıkar_btn.Text = "Personel Çıkar";
             personelcıkar_btn.UseVisualStyleBackColor = true;
+            personelcıkar_btn.Click += personelcıkar_btn_Click;
             // 
             // personelekle_btn
             // 
-            personelekle_btn.Location = new Point(418, 505);
+            personelekle_btn.Location = new Point(418, 456);
             personelekle_btn.Name = "personelekle_btn";
             personelekle_btn.Size = new Size(132, 39);
             personelekle_btn.TabIndex = 7;
             personelekle_btn.Text = "Personel Ekle";
             personelekle_btn.UseVisualStyleBackColor = true;
+            personelekle_btn.Click += personelekle_btn_Click;
             // 
-            // personel_textBox
+            // personel_listview1
             // 
-            personel_textBox.Location = new Point(418, 456);
-            personel_textBox.Name = "personel_textBox";
-            personel_textBox.Size = new Size(270, 23);
-            personel_textBox.TabIndex = 12;
+            personel_listview1.Columns.AddRange(new ColumnHeader[] { ID, Adi, Soyadi, Telefon, Email, Maaş, Şehir, Bölge });
+            personel_listview1.Location = new Point(61, 62);
+            personel_listview1.Name = "personel_listview1";
+            personel_listview1.Size = new Size(679, 361);
+            personel_listview1.TabIndex = 13;
+            personel_listview1.UseCompatibleStateImageBehavior = false;
+            personel_listview1.View = View.Details;
+            // 
+            // ID
+            // 
+            ID.Text = "ID";
+            // 
+            // Adi
+            // 
+            Adi.Text = "Adi";
+            // 
+            // Soyadi
+            // 
+            Soyadi.Text = "Soyadi";
+            // 
+            // Telefon
+            // 
+            Telefon.Text = "Telefon";
+            // 
+            // Email
+            // 
+            Email.Text = "Email";
+            // 
+            // Maaş
+            // 
+            Maaş.Text = "Maaş";
+            // 
+            // Şehir
+            // 
+            Şehir.Text = "Şehir";
+            // 
+            // Bölge
+            // 
+            Bölge.Text = "Bölge";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(418, 507);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Yeni Maaş Değeri";
+            textBox1.Size = new Size(270, 23);
+            textBox1.TabIndex = 16;
             // 
             // Personel
             // 
@@ -217,12 +248,22 @@
         private Label satıs_label;
         private TextBox personel_search_textBox;
         private RadioButton azdancok_radiobtn;
-        private Button verileriver_btn;
+        private Button zasirala;
         private RadioButton coktanaz_radiobtn;
         private Button personelcıkar_btn;
         private Button personelekle_btn;
         private Button personelmaasdusur_btn;
-        private Button personelmaasekle_btn;
-        private TextBox personel_textBox;
+        private ListView personel_listview1;
+        private ColumnHeader ID;
+        private ColumnHeader Adi;
+        private ColumnHeader Soyadi;
+        private ColumnHeader Telefon;
+        private ColumnHeader Email;
+        private ColumnHeader Maaş;
+        private ColumnHeader Şehir;
+        private ColumnHeader Bölge;
+        private Button azsirala;
+        private Button button1;
+        private TextBox textBox1;
     }
 }

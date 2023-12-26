@@ -31,9 +31,7 @@
             components = new System.ComponentModel.Container();
             side_panel = new System.Windows.Forms.Panel();
             kategori_btn = new Button();
-            sipariş_btn = new Button();
             label1 = new Label();
-            rapor_btn = new Button();
             emek_btn = new Button();
             cikisyap_btn = new Button();
             anasayfa_btn = new Button();
@@ -42,6 +40,8 @@
             bindingSource1 = new BindingSource(components);
             bindingSource2 = new BindingSource(components);
             fileSystemWatcher1 = new FileSystemWatcher();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            sipariş_btn = new Button();
             side_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
@@ -55,7 +55,6 @@
             side_panel.Controls.Add(kategori_btn);
             side_panel.Controls.Add(sipariş_btn);
             side_panel.Controls.Add(label1);
-            side_panel.Controls.Add(rapor_btn);
             side_panel.Controls.Add(emek_btn);
             side_panel.Controls.Add(cikisyap_btn);
             side_panel.Controls.Add(anasayfa_btn);
@@ -81,21 +80,6 @@
             kategori_btn.UseVisualStyleBackColor = true;
             kategori_btn.Click += kategori_btn_Click;
             // 
-            // sipariş_btn
-            // 
-            sipariş_btn.FlatStyle = FlatStyle.Popup;
-            sipariş_btn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            sipariş_btn.ForeColor = Color.White;
-            sipariş_btn.Image = Properties.Resources.shopping_bag;
-            sipariş_btn.ImageAlign = ContentAlignment.MiddleLeft;
-            sipariş_btn.Location = new Point(5, 372);
-            sipariş_btn.Name = "sipariş_btn";
-            sipariş_btn.Size = new Size(153, 45);
-            sipariş_btn.TabIndex = 7;
-            sipariş_btn.Text = "Siparişler";
-            sipariş_btn.UseVisualStyleBackColor = true;
-            sipariş_btn.Click += sipariş_btn_Click;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -106,21 +90,6 @@
             label1.Size = new Size(145, 32);
             label1.TabIndex = 6;
             label1.Text = "BoldPencils";
-            // 
-            // rapor_btn
-            // 
-            rapor_btn.FlatStyle = FlatStyle.Popup;
-            rapor_btn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            rapor_btn.ForeColor = Color.White;
-            rapor_btn.Image = Properties.Resources.report;
-            rapor_btn.ImageAlign = ContentAlignment.MiddleLeft;
-            rapor_btn.Location = new Point(5, 321);
-            rapor_btn.Name = "rapor_btn";
-            rapor_btn.Size = new Size(153, 45);
-            rapor_btn.TabIndex = 5;
-            rapor_btn.Text = "Raporlama";
-            rapor_btn.UseVisualStyleBackColor = true;
-            rapor_btn.Click += rapor_btn_Click;
             // 
             // emek_btn
             // 
@@ -185,11 +154,27 @@
             page_panel.Name = "page_panel";
             page_panel.Size = new Size(1023, 682);
             page_panel.TabIndex = 1;
+            page_panel.Paint += page_panel_Paint;
             // 
             // fileSystemWatcher1
             // 
             fileSystemWatcher1.EnableRaisingEvents = true;
             fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // sipariş_btn
+            // 
+            sipariş_btn.FlatStyle = FlatStyle.Popup;
+            sipariş_btn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            sipariş_btn.ForeColor = Color.White;
+            sipariş_btn.Image = Properties.Resources.shopping_bag;
+            sipariş_btn.ImageAlign = ContentAlignment.MiddleLeft;
+            sipariş_btn.Location = new Point(5, 321);
+            sipariş_btn.Name = "sipariş_btn";
+            sipariş_btn.Size = new Size(153, 45);
+            sipariş_btn.TabIndex = 7;
+            sipariş_btn.Text = "Siparişler";
+            sipariş_btn.UseVisualStyleBackColor = true;
+            sipariş_btn.Click += sipariş_btn_Click;
             // 
             // Panel
             // 
@@ -219,11 +204,11 @@
         private System.Windows.Forms.Panel page_panel;
         private Button emek_btn;
         private Button kategori_btn;
-        private Button sipariş_btn;
         private Label label1;
-        private Button rapor_btn;
         private BindingSource bindingSource1;
         private BindingSource bindingSource2;
         private FileSystemWatcher fileSystemWatcher1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Button sipariş_btn;
     }
 }

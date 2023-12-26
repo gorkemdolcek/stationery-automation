@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace BoldPencils
 {
@@ -14,7 +15,10 @@ namespace BoldPencils
     {
         public Panel()
         {
-            InitializeComponent();
+        sqlconnect sqlconnect = new sqlconnect();
+        sqlconnect.ConnectionOpen();
+        InitializeComponent();
+
         }
 
         private void anasayfa_btn_Click(object sender, EventArgs e)
@@ -43,11 +47,6 @@ namespace BoldPencils
         {
             page_panel.Controls.Clear();
 
-            Rapor raporpage = new Rapor();
-            raporpage.TopLevel = false;
-            raporpage.AutoScroll = true;
-            page_panel.Controls.Add(raporpage);
-            raporpage.Show();
         }
 
         private void sipariş_btn_Click(object sender, EventArgs e)
@@ -75,6 +74,11 @@ namespace BoldPencils
         private void cikisyap_btn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void page_panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

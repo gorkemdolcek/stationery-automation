@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gorke\\source\\repos\\BoldPencils\\BoldPencils\\BoldPencils.csproj": {}
+    "C:\\Users\\Gorke\\OneDrive\\Masaüstü\\stationery-automation\\BoldPencils\\BoldPencils.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gorke\\source\\repos\\BoldPencils\\BoldPencils\\BoldPencils.csproj": {
+    "C:\\Users\\Gorke\\OneDrive\\Masaüstü\\stationery-automation\\BoldPencils\\BoldPencils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gorke\\source\\repos\\BoldPencils\\BoldPencils\\BoldPencils.csproj",
+        "projectUniqueName": "C:\\Users\\Gorke\\OneDrive\\Masaüstü\\stationery-automation\\BoldPencils\\BoldPencils.csproj",
         "projectName": "BoldPencils",
-        "projectPath": "C:\\Users\\Gorke\\source\\repos\\BoldPencils\\BoldPencils\\BoldPencils.csproj",
+        "projectPath": "C:\\Users\\Gorke\\OneDrive\\Masaüstü\\stationery-automation\\BoldPencils\\BoldPencils.csproj",
         "packagesPath": "C:\\Users\\Gorke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gorke\\source\\repos\\BoldPencils\\BoldPencils\\obj\\",
+        "outputPath": "C:\\Users\\Gorke\\OneDrive\\Masaüstü\\stationery-automation\\BoldPencils\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,6 +43,12 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
