@@ -15,7 +15,7 @@ namespace BoldPencils
     {
         public Depo()
         {
-       
+
             InitializeComponent();
             /*
        sqlconnect sqlconnect = new sqlconnect();
@@ -48,6 +48,33 @@ namespace BoldPencils
         private void depo_listView_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void depo_ListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void depo_btn_Click(object sender, EventArgs e)
+        {
+            depo_ListView.Visible = true;
+            depodetay_listView.Visible = false;
+            depotransfer_listView.Visible = false;
+
+        }
+
+        private void depodetay_btn_Click(object sender, EventArgs e)
+        {
+            depodetay_listView.Visible = true;
+            depo_ListView.Visible = false;
+            depotransfer_listView.Visible = false;
+        }
+
+        private void depotransfer_btn_Click(object sender, EventArgs e)
+        {
+            depotransfer_listView.Visible = true;
+            depodetay_listView.Visible = false;
+            depo_ListView.Visible = false;
         }
     }
 }

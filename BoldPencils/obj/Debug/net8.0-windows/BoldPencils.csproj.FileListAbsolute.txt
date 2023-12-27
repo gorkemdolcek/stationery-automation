@@ -68,3 +68,7 @@ C:\Users\mdmrr\Source\Repos\stationery-automation\BoldPencils\obj\Debug\net8.0-w
 C:\Users\mdmrr\source\repos\stationery-automation\BoldPencils\obj\Debug\net8.0-windows\BoldPencils.SiparisEkle.resources
 C:\Users\mdmrr\source\repos\stationery-automation\BoldPencils\obj\Debug\net8.0-windows\BoldPencils.UrunEkle.resources
 C:\Users\mdmrr\source\repos\stationery-automation\BoldPencils\obj\Debug\net8.0-windows\BoldPencils.PersonelEkle.resources
+C:\Users\Gorke\OneDrive\Masaüstü\stationery-automation\BoldPencils\obj\Debug\net8.0-windows\BoldPencils.csproj.AssemblyReference.cache
+C:\Users\Gorke\OneDrive\Masaüstü\stationery-automation\BoldPencils\obj\Debug\net8.0-windows\BoldPencils.dll
+C:\Users\Gorke\OneDrive\Masaüstü\stationery-automation\BoldPencils\obj\Debug\net8.0-windows\refint\BoldPencils.dll
+C:\Users\Gorke\OneDrive\Masaüstü\stationery-automation\BoldPencils\obj\Debug\net8.0-windows\BoldPencils.pdb
