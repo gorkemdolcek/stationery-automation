@@ -64,29 +64,11 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need: 
 
-
-Example command:
-
-```sh
- gem install rails
-```
-
-### Setup
-
-Clone this repository to your desired folder:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
-
 ### Install
 
 Install this project with:
 
 ```sh
-  cd my-project
-  gem install or
   Go to the Release section and download the .exe file.
 ```
 
