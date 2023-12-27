@@ -1,0 +1,11 @@
+C:\Users\mdmrr\Desktop\BoldPencils\BoldPencils.exe
+C:\Users\mdmrr\Desktop\BoldPencils\BoldPencils.dll
+C:\Users\mdmrr\Desktop\BoldPencils\BoldPencils.deps.json
+C:\Users\mdmrr\Desktop\BoldPencils\BoldPencils.runtimeconfig.json
+C:\Users\mdmrr\Desktop\BoldPencils\BoldPencils.pdb
+C:\Users\mdmrr\Desktop\BoldPencils\System.Data.SqlClient.dll
+C:\Users\mdmrr\Desktop\BoldPencils\runtimes\win-arm64\native\sni.dll
+C:\Users\mdmrr\Desktop\BoldPencils\runtimes\win-x64\native\sni.dll
+C:\Users\mdmrr\Desktop\BoldPencils\runtimes\win-x86\native\sni.dll
+C:\Users\mdmrr\Desktop\BoldPencils\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\mdmrr\Desktop\BoldPencils\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

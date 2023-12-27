@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             satıs_panel = new System.Windows.Forms.Panel();
+            textBox1 = new TextBox();
             azsirala = new Button();
             button1 = new Button();
             personelmaasdusur_btn = new Button();
@@ -48,7 +49,6 @@
             Maaş = new ColumnHeader();
             Şehir = new ColumnHeader();
             Bölge = new ColumnHeader();
-            textBox1 = new TextBox();
             satıs_panel.SuspendLayout();
             SuspendLayout();
             // 
@@ -73,6 +73,14 @@
             satıs_panel.Size = new Size(797, 643);
             satıs_panel.TabIndex = 10;
             satıs_panel.Paint += satıs_panel_Paint;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(418, 507);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Yeni Maaş Değeri";
+            textBox1.Size = new Size(270, 23);
+            textBox1.TabIndex = 16;
             // 
             // azsirala
             // 
@@ -215,14 +223,6 @@
             // Bölge
             // 
             Bölge.Text = "Bölge";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(418, 507);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Yeni Maaş Değeri";
-            textBox1.Size = new Size(270, 23);
-            textBox1.TabIndex = 16;
             // 
             // Personel
             // 
