@@ -58,12 +58,6 @@
 
 > You can see a sample database or take a look at our very nice gui made in c# and get an idea.
 
-To get a local copy up and running, follow these steps.
-
-### Prerequisites
-
-In order to run this project you need: 
-
 ### Install
 
 Install this project with:
