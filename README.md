@@ -2,7 +2,7 @@
 
 <div align="center">
   
-  <img src="bold_pencils.ico" alt="logo" width="140"  height="auto" />
+  <img src="bold_pencils.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Stationery Automation</b></h3>
